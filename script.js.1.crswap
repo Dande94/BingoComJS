@@ -1,0 +1,28 @@
+
+let numeroSort = document.getElementById('numeroSort');
+let btnSortear = document.getElementById('btnSortear');
+let sorteados = [];
+
+btnSortear.addEventListener('click',function sorteio(event){
+    event.preventDefault();
+    let numero = parseInt((Math.random()*100).toFixed(0));
+    // btnSortear.style.boxShadow = 'none';
+    // btnSortear.style.right = '2px';
+    // btnSortear.style.bottom = '2px';
+    numeroSort.innerHTML= numero;
+    
+    let numeroExiste  = sorteados.filter((item)=>{
+        if(numero == item){
+            return true
+        }else{
+            return false
+        }
+    })
+    if(numeroExiste){
+        sorteio();
+    }else{
+        sorteados.push(numero);
+        console.log(sorteados);
+    }
+
+})

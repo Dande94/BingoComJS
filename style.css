@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Work+Sans:wght@600&display=swap');
+
+/*
+font-family: 'Bungee Spice', cursive;
+font-family: 'Work Sans', sans-serif;
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+:root{
+    --degradeBtn:linear-gradient(180deg, rgba(249,24,8,1) 0%, rgba(159,11,0,1) 100%);
+    --degradeBola:radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(221,221,221,1) 95%);
+    --background-verde:rgba(86,163,134,0.5);
+    --shadowClaro:#888;
+    --shadowEscura:#777;
+    --branco:#f7f7f7;
+}
+body{
+    background: linear-gradient(30deg, rgba(162,219,111,1) 29%, rgba(86,163,134,1) 51%, rgba(35,52,37,1) 90%);
+    background-repeat:no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    height: 100vh;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    padding: 0.5em;
+    row-gap: .5em;
+}
+h4,label{
+    color: var(--branco);  
+    padding: .3em;
+
+    background-color:var(--background-verde);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+}
+/*header */
+header{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+#btnTravaInput,#btnReset{
+    background-color:var(--background-verde);
+    border: none;
+
+}
+#maxNumero{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+#maxNumero label{
+    font-size: 0.9em;
+}
+#maxNumero div{
+    display: flex;
+    align-items: center;
+}
+#maxNumero input{
+    width: 3em;
+    height: 1.5em;
+    font-size: 20px;
+}
+[readonly]{
+    background: none;
+    border: none;
+    color: var(--branco);
+    text-align: center;
+}
+#sortear{
+    width: 30%;
+    display: flex;
+    justify-content: right;
+}
+#btnSortear{
+    background:var(--degradeBtn);
+    font-size: 24px;
+    width: 120px;
+    padding: 3px 5px;
+    text-align: center;
+    color: var(--branco);
+    border-radius: 5px;
+    /* box-shadow: 2px 2px var(--shadowBtn); */
+    cursor: pointer;
+    border: none;
+}
+#btnSortear[disabled]{
+    background:var(--shadowEscura);
+    color: var(--shadowClaro);
+}
+/* fim header */
+
+/* tela de sorteio */
+#telaSorteio{
+    display: flex;
+    height: 80vh;
+}
+/* lado esquerdo */
+#ladoEsquerdo{
+    flex:1;
+    height:100%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-direction:column;
+    row-gap: .5em;
+}
+
+#sorteio{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border: 2px solid var(--shadowEscura); 
+    background: var(--degradeBola);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:100px;
+}
+#ultimosSorteios{
+    border-top: 2px solid var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    width:100%;
+    height: 50%;
+    
+}
+
+#ultimosSorteiosInner{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    column-gap: 1.4em;
+    justify-content:center;
+}
+.ultimasEsfera{
+    width:1.8em;
+    height:1.8em;
+    border-radius:50%;
+    border: 2px solid var(--shadowEscura); 
+    background: var(--degradeBola);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.8em;
+}
+/* fim lado esquerdo */
+
+#ladoDireito{
+    flex:2;
+    border-left: 2px solid var(--branco);
+    height:100%;
+    text-align: center;
+}
+#todosOsNumeros{
+    display: flex; 
+    flex-wrap: wrap;
+    max-height: 95%; /* Defina a altura máxima desejada */
+    overflow: auto; /* Habilita a rolagem caso o conteúdo exceda a altura máxima */
+
+}
+.ultimasEsfera.mini{
+    width:2em;
+    height:2em;
+    margin: .2em;
+    border-radius:50%;
+    border: 2px solid var(--shadowEscura); 
+    background: var(--degradeBola);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1em;
+}

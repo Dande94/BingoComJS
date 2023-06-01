@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Projeto Pessoal</title>
+</head>
+<body>
+    <main>
+        <header>
+            <span id="maxNumero">
+                <label  for="">
+                    Número Máximo a ser Sorteado:
+                </label>
+                <div>
+                    <input id="inputMaxNumero" type="number">
+                    <input id="btnTravaInput" type="button" value="🔒">
+                    <input id="btnReset" type="button" value="🔄">
+                </div>
+            </span>
+            <span id="sortear">
+                <button id="btnSortear" disabled>Sortear</button>
+            </span>
+        </header>
+        <section id="telaSorteio">
+            <div id="ladoEsquerdo">
+                <div id="sorteio">
+                    <p id="numeroSort"></p>
+                </div>
+                <div id="ultimosSorteios">
+                    <h4>Últimos Sorteios</h4>
+                    <div id="ultimosSorteiosInner">
+                        <!-- preenchido automáticamente  -->
+                    </div>
+                </div>
+            </div>
+            <div id="ladoDireito">    
+                <h4>Todos os números chamados</h4>
+                <div id="todosOsNumeros">
+
+                </div>     
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

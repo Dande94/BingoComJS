@@ -1,0 +1,13 @@
+let numeroSort = document.getElementById('numeroSort');
+let numero = parseInt((Math.random()*100).toFixed(0));
+let sorteados = [];
+numeroSort.innerHTML= numero;
+
+
+let btnSortear = document.getElementById('btnSortear');
+
+btnSortear.addEventListener('click',()=>{
+    // btnSortear.style.boxShadow = 'none';
+    // btnSortear.style.right = '2px';
+    btnSortear.style.bottom = '2px';
+})
