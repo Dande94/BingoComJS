@@ -40,7 +40,7 @@ function salvarSorteio(){
 function travarInput(){
     let numeroMaximo = document.getElementById('inputMaxNumero');    
     numeroCapturado = numeroMaximo.value;
-    if( (numeroCapturado.trim() !== "") && (!isNaN(numeroCapturado)) && (Number.isInteger(Number(numeroCapturado)))){
+    if( (numeroCapturado > 0) && (numeroCapturado.trim() !== "") && (!isNaN(numeroCapturado)) && (Number.isInteger(Number(numeroCapturado)))){
         // console.log("É numero");
         if(numeroMaximo.hasAttribute('readonly') !== true){
                 numeroMaximo.setAttribute('readonly','');
