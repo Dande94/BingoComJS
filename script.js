@@ -111,7 +111,5 @@ function sorteio(event){
 
 function resetarPágina(){
     localStorage.clear();
-    location.reload();//recarrega a págia;
-    numeroMaximo.removeAttribute('readonly','');
-    
+    location.reload();//recarrega a págia;   
 };
