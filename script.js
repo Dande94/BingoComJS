@@ -50,10 +50,8 @@ function travarInput(){
             // else{numeroMaximo.removeAttribute('readonly','');}
     }else{
         alert("Informe um numero(inteiro!)");//pede para informa um valor inteiro;
-
-        location.reload();//recarrega a págia;
+        resetarPágina();
     }
-
 }
 
 function sorteio(event){
