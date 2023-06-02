@@ -110,7 +110,7 @@ function sorteio(event){
 };
 
 function resetarPágina(){
-    location.reload();//recarrega a págia;
-    numeroMaximo.removeAttribute('readonly','');
     localStorage.clear();
+    numeroMaximo.removeAttribute('readonly','');
+    location.reload();//recarrega a págia;
 };
